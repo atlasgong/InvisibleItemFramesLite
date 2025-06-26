@@ -1,8 +1,5 @@
 package com.atlasgong.invisibleitemframeslite;
 
-import be.seeseemelk.mockbukkit.MockBukkit;
-import be.seeseemelk.mockbukkit.ServerMock;
-import be.seeseemelk.mockbukkit.entity.PlayerMock;
 import com.atlasgong.invisibleitemframeslite.itemframe.ItemFrameRegistry;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -16,6 +13,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.mockbukkit.mockbukkit.MockBukkit;
+import org.mockbukkit.mockbukkit.ServerMock;
+import org.mockbukkit.mockbukkit.entity.PlayerMock;
 
 import java.lang.reflect.Field;
 
