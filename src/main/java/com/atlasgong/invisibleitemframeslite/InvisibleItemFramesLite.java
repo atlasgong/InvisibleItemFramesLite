@@ -25,7 +25,6 @@ import java.util.Map;
 
 public class InvisibleItemFramesLite extends JavaPlugin {
 
-    public static InvisibleItemFramesLite INSTANCE;
     private static boolean firstLoad = true;
 
     public NamespacedKey getInvisibleKey() {
@@ -51,7 +50,6 @@ public class InvisibleItemFramesLite extends JavaPlugin {
 
     public InvisibleItemFramesLite() {
         super();
-        INSTANCE = this;
         IS_INVISIBLE_KEY = new NamespacedKey(this, "invisible");
         REGULAR_RECIPE_KEY = new NamespacedKey(this, "invisible_item_frame");
         GLOW_RECIPE_KEY = new NamespacedKey(this, "invisible_glow_item_frame");
@@ -64,7 +62,7 @@ public class InvisibleItemFramesLite extends JavaPlugin {
         PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new ItemFramePlaceListener(IS_INVISIBLE_KEY), this);
         pm.registerEvents(new ItemFrameBreakListener(IS_INVISIBLE_KEY), this);
-        pm.registerEvents(new ItemFrameInteractionListener(IS_INVISIBLE_KEY), this);
+        pm.registerEvents(new ItemFrameInteractionListener(this, IS_INVISIBLE_KEY), this);
         pm.registerEvents(new ItemFrameCraftListener(IS_INVISIBLE_KEY), this);
 
         // load config and register recipes

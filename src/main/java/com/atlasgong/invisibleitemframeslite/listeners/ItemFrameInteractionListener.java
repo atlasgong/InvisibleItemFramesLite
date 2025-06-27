@@ -1,6 +1,5 @@
 package com.atlasgong.invisibleitemframeslite.listeners;
 
-import com.atlasgong.invisibleitemframeslite.InvisibleItemFramesLite;
 import com.atlasgong.invisibleitemframeslite.Utils;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -11,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 /**
@@ -20,6 +20,8 @@ import org.bukkit.scheduler.BukkitRunnable;
  */
 public class ItemFrameInteractionListener implements Listener {
 
+    private final JavaPlugin plugin;
+
     /** Key used to tag item frames as invisible via persistent data. */
     private final NamespacedKey isInvisibleKey;
 
@@ -27,9 +29,11 @@ public class ItemFrameInteractionListener implements Listener {
     /**
      * Constructs a new ItemFrameInteractionListener.
      *
+     * @param plugin         The plugin instanced used for the Bukkit scheduler.
      * @param isInvisibleKey The {@link NamespacedKey} used to identify invisible item frames.
      */
-    public ItemFrameInteractionListener(NamespacedKey isInvisibleKey) {
+    public ItemFrameInteractionListener(JavaPlugin plugin, NamespacedKey isInvisibleKey) {
+        this.plugin = plugin;
         this.isInvisibleKey = isInvisibleKey;
     }
 
@@ -47,7 +51,7 @@ public class ItemFrameInteractionListener implements Listener {
         }
 
         final ItemFrame frame = (ItemFrame) entity;
-        new ItemFrameUpdateRunnable(frame).runTask(InvisibleItemFramesLite.INSTANCE);
+        new ItemFrameUpdateRunnable(frame).runTask(plugin);
     }
 
 
@@ -63,7 +67,7 @@ public class ItemFrameInteractionListener implements Listener {
         }
 
         final ItemFrame frame = (ItemFrame) entity;
-        new ItemFrameUpdateRunnable(frame).runTask(InvisibleItemFramesLite.INSTANCE);
+        new ItemFrameUpdateRunnable(frame).runTask(plugin);
     }
 
 
