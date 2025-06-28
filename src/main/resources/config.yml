@@ -1,7 +1,10 @@
+# Legacy chat formatting has been deprecated.
+# Please use Adventure's MiniMessage formatting: https://docs.advntr.dev/minimessage/format
+
 # configuration of item metadata
 items:
   invisible_item_frame:
-    name: §rInvisible Item Frame # what the name of the item should be
+    name: <!italic>Invisible Item Frame # what the name of the item should be
     enchantment_glint: true # if the item should have an enchantment glint
 
     # uncomment the below to assign lore text for the item
@@ -10,7 +13,7 @@ items:
     #  - line2
 
   invisible_glow_item_frame:
-    name: §rInvisible Glow Item Frame
+    name: <!italic>Invisible Glow Item Frame
     enchantment_glint: true
 
 # configuration for crafting recipes

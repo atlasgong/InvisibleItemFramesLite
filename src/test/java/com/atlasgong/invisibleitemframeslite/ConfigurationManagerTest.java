@@ -66,9 +66,11 @@ public class ConfigurationManagerTest {
         cm.addConfigDefaults(variant, type);
 
         FileConfiguration config = plugin.getConfig();
+        String itemName = config.getString("items." + variant + ".name");
+        assert itemName != null;
 
-        assertEquals("§r" + Utils.toTitleCase(variant.replace('_', ' ')),
-                config.getString("items." + variant + ".name"));
+        assertEquals(MiniMessage.miniMessage().deserialize("<!italic>" + Utils.toTitleCase(variant.replace('_', ' '))),
+                MiniMessage.miniMessage().deserialize(itemName));
         assertTrue(config.getBoolean("items." + variant + ".enchantment_glint"));
         assertEquals(8, config.getInt("recipes." + variant + ".count"));
         assertEquals(Arrays.asList("FFF", "FAF", "FFF"), config.getStringList("recipes." + variant + ".shape"));
@@ -98,7 +100,7 @@ public class ConfigurationManagerTest {
         ConfigurationManager cm = new ConfigurationManager(logger, config);
         ItemFrameData actual = cm.loadItemData(itemId);
 
-        assertEquals(MiniMessage.miniMessage().serialize(ifd.name()),
+        assertEquals("<!italic>" + MiniMessage.miniMessage().serialize(ifd.name()),
                 MiniMessage.miniMessage().serialize(actual.name()), "name should be the same");
 
         assertEquals(ifd.lore(), actual.lore(), "lore should be the same");
