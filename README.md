@@ -59,7 +59,7 @@ shipped natively with vanilla.
 
 ## Migrating from v2 to v3
 
-Server owners are expected to update their configuration to replace any legacy chat formatting with Adventure's
+Server admins are expected to update their configuration to replace any legacy chat formatting with Adventure's
 MiniMessage formatting: https://docs.advntr.dev/minimessage/format. Alternatively, if you wish, you may simply delete
 the config file and a fresh one will automatically be generated on the next server restart.
 
