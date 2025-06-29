@@ -57,6 +57,12 @@ shipped natively with vanilla.
 3. Restart your server
 4. Craft your item frames :)
 
+## Migrating from v2 to v3
+
+Server owners are expected to update their configuration to replace any legacy chat formatting with Adventure's
+MiniMessage formatting: https://docs.advntr.dev/minimessage/format. Alternatively, if you wish, you may simply delete
+the config file and a fresh one will automatically be generated on the next server restart.
+
 ## Contributing
 
 Code is licensed under MPLv2, as per the original. See [LICENSE-MPL](./LICENSE-MPL) for details.
