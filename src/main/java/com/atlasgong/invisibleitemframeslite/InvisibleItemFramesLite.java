@@ -4,6 +4,7 @@ import com.atlasgong.invisibleitemframeslite.listeners.ItemFrameBreakListener;
 import com.atlasgong.invisibleitemframeslite.listeners.ItemFrameCraftListener;
 import com.atlasgong.invisibleitemframeslite.listeners.ItemFrameInteractionListener;
 import com.atlasgong.invisibleitemframeslite.listeners.ItemFramePlaceListener;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -87,7 +88,7 @@ public class InvisibleItemFramesLite extends JavaPlugin {
 
         // incl metrics for bStats
         int pluginId = 25837;
-        @SuppressWarnings("unused") Metrics metrics = new Metrics(this, pluginId);
+        new Metrics(this, pluginId);
     }
 
     private void registerRecipe(Recipe recipe) {
