@@ -19,7 +19,7 @@ import java.lang.reflect.Field;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class UtilsTest {
+class UtilsTest extends MockBukkitTest {
 
     private ServerMock server;
     private InvisibleItemFramesLite plugin;
@@ -86,7 +86,7 @@ class UtilsTest {
         org.bukkit.entity.Entity nonFrameEntity = w.spawnEntity(loc.add(2, 0, 0), EntityType.ZOMBIE);
         assert !Utils.isInvisibleItemFrame(nonFrameEntity, isInvisibleKey);
     }
-    
+
     @Test
     void testToTitleCase_withExpectedString() {
         assert Utils.toTitleCase("invisible item frame").equals("Invisible Item Frame");
