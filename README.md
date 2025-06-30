@@ -71,3 +71,6 @@ git clone https://github.com/atlasgong/InvisibleItemFramesLite
 2. Run, update, or write unit tests as necessary
 3. Build the project with Maven, test manually in-game
 4. Create a PR
+
+## bStats Metrics
+<img src="https://bstats.org/signatures/bukkit/InvisibleItemFramesLite.svg" alt="bStats Metrics" width="100%">
