@@ -1,94 +1,38 @@
 package com.atlasgong.invisibleitemframeslite.listeners;
 
 import com.atlasgong.invisibleitemframeslite.Utils;
-import org.bukkit.Material;
+import io.papermc.paper.event.player.PlayerItemFrameChangeEvent;
 import org.bukkit.NamespacedKey;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.ItemFrame;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.player.PlayerInteractEntityEvent;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 
-/**
- * Listener that handles interactions and damage events involving invisible item frames.
- * Ensures that the visibility of item frames is updated appropriately based on whether
- * they contain an item.
- */
+/** Listener that handles interactions with invisible item frames. */
 public class ItemFrameInteractionListener implements Listener {
-
-    private final JavaPlugin plugin;
 
     /** Key used to tag item frames as invisible via persistent data. */
     private final NamespacedKey isInvisibleKey;
 
-
     /**
      * Constructs a new ItemFrameInteractionListener.
      *
-     * @param plugin         The plugin instanced used for the Bukkit scheduler.
      * @param isInvisibleKey The {@link NamespacedKey} used to identify invisible item frames.
      */
-    public ItemFrameInteractionListener(JavaPlugin plugin, NamespacedKey isInvisibleKey) {
-        this.plugin = plugin;
+    public ItemFrameInteractionListener(NamespacedKey isInvisibleKey) {
         this.isInvisibleKey = isInvisibleKey;
     }
 
-
-    /**
-     * Triggered when a player right-clicks on an entity.
-     * If the entity is an invisible item frame, schedules a visibility update
-     * to reflect any item changes caused by the interaction (e.g., placing or removing an item).
-     */
+    /** Toggles visibility of invisible item frames s.t. they are visible when empty and invisible when filled. */
     @EventHandler
-    public void onPlayerInteractEntity(PlayerInteractEntityEvent event) {
-        final Entity entity = event.getRightClicked();
-        if (!Utils.isInvisibleItemFrame(entity, isInvisibleKey)) {
+    public void onItemFrameChange(PlayerItemFrameChangeEvent e) {
+        ItemFrame frame = e.getItemFrame();
+        if (!Utils.isInvisibleItemFrame(frame, isInvisibleKey)) {
             return;
         }
 
-        final ItemFrame frame = (ItemFrame) entity;
-        new ItemFrameUpdateRunnable(frame).runTask(plugin);
-    }
-
-
-    /**
-     * If the damaged entity is an invisible item frame, schedules a visibility update
-     * in case its item was removed (e.g. by a player punching it).
-     */
-    @EventHandler
-    public void onEntityDamageByEntityEvent(EntityDamageByEntityEvent event) {
-        final Entity entity = event.getEntity();
-        if (!Utils.isInvisibleItemFrame(entity, isInvisibleKey)) {
-            return;
-        }
-
-        final ItemFrame frame = (ItemFrame) entity;
-        new ItemFrameUpdateRunnable(frame).runTask(plugin);
-    }
-
-
-    /**
-     * A task that updates an invisible item frame’s visibility one tick later,
-     * ensuring that any changes to its contents (like items being added or removed)
-     * have already taken effect. Invisible item frames become visible when empty,
-     * and invisible again when holding an item.
-     */
-    private static class ItemFrameUpdateRunnable extends BukkitRunnable {
-        final ItemFrame itemFrame;
-
-        ItemFrameUpdateRunnable(ItemFrame itemFrame) {
-            this.itemFrame = itemFrame;
-        }
-
-        @Override
-        public void run() {
-            final ItemStack item = itemFrame.getItem();
-            final boolean hasItem = item.getType() != Material.AIR;
-            itemFrame.setVisible(!hasItem);
+        switch (e.getAction()) {
+            case PLACE -> frame.setVisible(false);
+            case REMOVE -> frame.setVisible(true);
         }
     }
 

@@ -56,7 +56,7 @@ public class InvisibleItemFramesLite extends JavaPlugin {
         PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new ItemFramePlaceListener(IS_INVISIBLE_KEY), this);
         pm.registerEvents(new ItemFrameBreakListener(IS_INVISIBLE_KEY), this);
-        pm.registerEvents(new ItemFrameInteractionListener(this, IS_INVISIBLE_KEY), this);
+        pm.registerEvents(new ItemFrameInteractionListener(IS_INVISIBLE_KEY), this);
         pm.registerEvents(new ItemFrameCraftListener(IS_INVISIBLE_KEY), this);
 
         // load config
