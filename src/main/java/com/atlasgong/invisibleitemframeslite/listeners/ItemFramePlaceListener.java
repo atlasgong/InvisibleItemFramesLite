@@ -2,7 +2,6 @@ package com.atlasgong.invisibleitemframeslite.listeners;
 
 import com.atlasgong.invisibleitemframeslite.Utils;
 import org.bukkit.NamespacedKey;
-import org.bukkit.entity.Hanging;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.hanging.HangingPlaceEvent;
@@ -30,11 +29,10 @@ public class ItemFramePlaceListener implements Listener {
      */
     @EventHandler
     public void onHangingPlace(HangingPlaceEvent e) {
-        Hanging hanging = e.getEntity();
-        if (Utils.isInvisibleItemFrame(hanging, isInvisibleKey)) {
-            hanging.getPersistentDataContainer().set(isInvisibleKey,
+        if (Utils.isInvisibleItemFrame(e.getItemStack(), isInvisibleKey)) {
+            e.getEntity().getPersistentDataContainer().set(isInvisibleKey,
                     PersistentDataType.BYTE, (byte) 1);
         }
     }
-    
+
 }
