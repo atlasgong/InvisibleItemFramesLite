@@ -3,7 +3,11 @@ package com.atlasgong.invisibleitemframeslite.listeners;
 import com.atlasgong.invisibleitemframeslite.Utils;
 import io.papermc.paper.event.player.PlayerItemFrameChangeEvent;
 import org.bukkit.NamespacedKey;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
+import org.bukkit.block.Container;
 import org.bukkit.entity.ItemFrame;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
@@ -22,7 +26,10 @@ public class ItemFrameInteractionListener implements Listener {
         this.isInvisibleKey = isInvisibleKey;
     }
 
-    /** Toggles visibility of invisible item frames s.t. they are visible when empty and invisible when filled. */
+    /**
+     * Toggles visibility of invisible item frames s.t. they are visible when empty and invisible when filled.
+     * Allows "passing through" the item frame to open the container behind it, if the player is not sneaking.
+     */
     @EventHandler
     public void onItemFrameChange(PlayerItemFrameChangeEvent e) {
         ItemFrame frame = e.getItemFrame();
@@ -33,6 +40,17 @@ public class ItemFrameInteractionListener implements Listener {
         switch (e.getAction()) {
             case PLACE -> frame.setVisible(false);
             case REMOVE -> frame.setVisible(true);
+            case ROTATE -> { // pass-through logic
+                Player p = e.getPlayer();
+                if (p.isSneaking()) return; // allow rotations when player sneaking
+
+                BlockFace attachedFace = e.getItemFrame().getAttachedFace();
+                Block mount = e.getItemFrame().getLocation().getBlock().getRelative(attachedFace);
+                if (mount.getState() instanceof Container container) {
+                    e.setCancelled(true);
+                    p.openInventory(container.getInventory());
+                }
+            }
         }
     }
 
