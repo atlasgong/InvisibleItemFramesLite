@@ -10,6 +10,7 @@ import org.bukkit.World;
 import org.bukkit.entity.GlowItemFrame;
 import org.bukkit.entity.ItemFrame;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.hanging.HangingBreakEvent;
 import org.bukkit.inventory.ItemStack;
@@ -40,7 +41,7 @@ public class ItemFrameBreakListener implements Listener {
      * work around this, we cancel the event, manually remove the item entity, then manually drop the corresponding
      * {@link ItemStack}.
      */
-    @EventHandler()
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onHangingBreak(HangingBreakEvent e) {
         final boolean isInvisFrame = Utils.isInvisibleItemFrame(e.getEntity(), isInvisibleKey);
         if (!isInvisFrame) return;

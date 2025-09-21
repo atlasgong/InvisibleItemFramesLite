@@ -4,6 +4,7 @@ import com.atlasgong.invisibleitemframeslite.Utils;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.ItemStack;
@@ -30,7 +31,7 @@ public class ItemFrameCraftListener implements Listener {
     /**
      * Blocks the ability to craft invisible item frames using themselves.
      */
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onPrepareItemCraft(PrepareItemCraftEvent event) {
         // check if crafted result is our invisible item frame
         if (!Utils.isInvisibleItemFrame(event.getInventory().getResult(), isInvisibleKey)) {

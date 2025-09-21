@@ -9,6 +9,7 @@ import org.bukkit.block.Container;
 import org.bukkit.entity.ItemFrame;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 /** Listener that handles interactions with invisible item frames. */
@@ -30,7 +31,7 @@ public class ItemFrameInteractionListener implements Listener {
      * Toggles visibility of invisible item frames s.t. they are visible when empty and invisible when filled.
      * Allows "passing through" the item frame to open the container behind it, if the player is not sneaking.
      */
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onItemFrameChange(PlayerItemFrameChangeEvent e) {
         ItemFrame frame = e.getItemFrame();
         if (!Utils.isInvisibleItemFrame(frame, isInvisibleKey)) {

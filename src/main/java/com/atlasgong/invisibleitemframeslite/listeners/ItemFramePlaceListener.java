@@ -3,6 +3,7 @@ package com.atlasgong.invisibleitemframeslite.listeners;
 import com.atlasgong.invisibleitemframeslite.Utils;
 import org.bukkit.NamespacedKey;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.hanging.HangingPlaceEvent;
 import org.bukkit.persistence.PersistentDataType;
@@ -27,7 +28,7 @@ public class ItemFramePlaceListener implements Listener {
      * If the player previously attempted to place an invisible item frame, the newly created
      * item frame entity is tagged as invisible using persistent data.
      */
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onHangingPlace(HangingPlaceEvent e) {
         if (Utils.isInvisibleItemFrame(e.getItemStack(), isInvisibleKey)) {
             e.getEntity().getPersistentDataContainer().set(isInvisibleKey,
