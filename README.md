@@ -42,7 +42,7 @@ No command trees. No permission spaghetti. Just craftable invisible item frames 
 
 ## Installation
 
-1. Download the plugin JAR on [Hangar](https://hangar.papermc.io/atlasgong/InvisibleItemFramesLite)
+1. Download the plugin JAR on [Modrinth](https://modrinth.com/plugin/invisibleitemframes)
 2. Drop the plugin JAR into your `plugins/` folder
 3. Restart your server
 4. Craft your item frames :)
