@@ -6,8 +6,8 @@ items:
 
     # uncomment the below to assign lore text for the item
     #lore:
-    #  - line1
-    #  - line2
+    #  - <blue>Line 1</blue>
+    #  - <color:#FF5555>Line 2
 
   invisible_glow_item_frame:
     name: <!italic>Invisible Glow Item Frame
