@@ -5,7 +5,7 @@
 
     <groupId>com.atlasgong</groupId>
     <artifactId>InvisibleItemFramesLite</artifactId>
-    <version>3.1.1</version>
+    <version>3.1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>InvisibleItemFramesLite</name>
@@ -78,6 +78,7 @@
             <groupId>net.kyori</groupId>
             <artifactId>adventure-text-serializer-legacy</artifactId>
             <version>4.22.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.platform</groupId>
