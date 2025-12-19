@@ -6,3 +6,14 @@ description: Adds craftable invisible item frames for survival.
 author: atlasgong
 contributors: [ Tiffnix ]
 website: "https://github.com/atlasgong/InvisibleItemFramesLite"
+
+commands:
+  invisframes:
+    description: Give invisible item frames
+    usage: /invisframes give <regular|glow>
+    permission: invisibleitemframeslite.give
+
+permissions:
+  invisibleitemframeslite.give:
+    description: Allows giving invisible item frames
+    default: op

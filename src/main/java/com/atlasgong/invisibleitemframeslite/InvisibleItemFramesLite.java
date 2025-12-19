@@ -1,5 +1,6 @@
 package com.atlasgong.invisibleitemframeslite;
 
+import com.atlasgong.invisibleitemframeslite.command.InvisFramesCommand;
 import com.atlasgong.invisibleitemframeslite.listeners.ItemFrameBreakListener;
 import com.atlasgong.invisibleitemframeslite.listeners.ItemFrameCraftListener;
 import com.atlasgong.invisibleitemframeslite.listeners.ItemFrameInteractionListener;
@@ -14,6 +15,8 @@ import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
 
 public class InvisibleItemFramesLite extends JavaPlugin {
 
@@ -85,6 +88,11 @@ public class InvisibleItemFramesLite extends JavaPlugin {
 
         // register shapeless glow item frame recipe
         registerShapelessGlowRecipe(getShapelessGlowRecipeKey());
+
+        // register commands
+        InvisFramesCommand command = new InvisFramesCommand();
+        Objects.requireNonNull(getCommand("invisframes")).setExecutor(command);
+        Objects.requireNonNull(getCommand("invisframes")).setTabCompleter(command);
 
         // incl metrics for bStats
         int pluginId = 25837;
