@@ -26,7 +26,7 @@ See a [video demo](https://youtu.be/2kLfRHyH5cc), and the [gallery](https://modr
 
 - Adds invisible item frames you can craft and place like normal
 - Frames are visible when empty, and automatically turn invisible once an item is added
-- Allows for container pass-through (you an still sneak to rotate items)
+- Allows for container pass-through (you can still sneak to rotate items)
 - Perfect for clean builds, displays, or shops without visual clutter
 
 ## Why This Version?
