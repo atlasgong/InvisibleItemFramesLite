@@ -53,7 +53,7 @@ Server admins are expected to update their configuration to replace any legacy c
 
 ## Contributing
 
-Code is licensed under MPLv2, as per the original. See [LICENSE-MPL](./LICENSE-MPL) for details. Any contributions are assumed to be under this license.
+Code is licensed under MPLv2, as per our upstream. See [LICENSE-MPL](./LICENSE-MPL) for details. Any contributions are assumed to be under this license.
 
 0. **Prerequisites**
 
