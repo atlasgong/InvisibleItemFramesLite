@@ -35,7 +35,7 @@ This is an updated, stripped-down fork of the original [InvisibleItemFrames](htt
 
 - Lightweight performance; it's tiny, fast, and focused
 - Works right out of the box; no additional configuration is needed
-- Compatibility with newer Paper versions (1.21+)
+- Compatibility with newer Paper versions (26.1+)
 - Plenty of bug fixes
 
 No command trees. No permission spaghetti. Just craftable invisible item frames that feel like they could've been shipped natively with vanilla.
@@ -57,7 +57,7 @@ Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany35
 
 0. **Prerequisites**
 
-- JDK 21
+- JDK 25
 - Maven
 
 1. Clone the repository
@@ -68,3 +68,4 @@ Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany35
 ## bStats Metrics
 
 <img src="https://bstats.org/signatures/bukkit/InvisibleItemFramesLite.svg" alt="bStats Metrics" width="100%">
+
