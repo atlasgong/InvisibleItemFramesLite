@@ -1,0 +1,18 @@
+[versions]
+paper = "26.1.2.build.72-stable"
+adventure = "4.26.1"
+bstats = "3.2.1"
+junit = "5.12.2"
+mockbukkit = "4.114.0"
+
+[libraries]
+paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
+adventure-legacy = { module = "net.kyori:adventure-text-serializer-legacy", version.ref = "adventure" }
+bstats-bukkit = { module = "org.bstats:bstats-bukkit", version.ref = "bstats" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+mockbukkit = { module = "org.mockbukkit.mockbukkit:mockbukkit-v26.1.2", version.ref = "mockbukkit" }
+
+[plugins]
+shadow = { id = "com.gradleup.shadow", version = "9.3.2" }

@@ -57,13 +57,13 @@ Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany35
 
 0. **Prerequisites**
 
+- A UNIX-like system (Linux, macOS, WSL)
 - JDK 25
-- Maven
 
-1. Clone the repository
-2. Run, update, or write unit tests as necessary
-3. Build the project with Maven, test manually in-game
-4. Create a PR
+1. Clone the repository.
+2. Run `./gradlew test` and update or add tests as needed.
+3. Run `./gradlew build`, then test the plugin JAR from `build/libs/` on Paper.
+4. Create a PR.
 
 ## bStats Metrics
 
