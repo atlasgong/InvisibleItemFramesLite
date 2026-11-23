@@ -25,7 +25,7 @@ dependencies {
 }
 
 group = "com.atlasgong"
-version = "3.2.3-SNAPSHOT"
+version = providers.gradleProperty("releaseVersion").getOrElse("dev-SNAPSHOT")
 description = "InvisibleItemFramesLite"
 
 java {

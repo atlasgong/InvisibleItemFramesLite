@@ -53,7 +53,7 @@ Server admins are expected to update their configuration to replace any legacy c
 
 ## Contributing
 
-Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany352/InvisibleItemFrames/blob/main/LICENSE-MPL). See [LICENSE-MPL](./LICENSE-MPL) for details. Any contributions are assumed to be under this license.
+Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany352/InvisibleItemFrames/blob/main/LICENSE-MPL). See [LICENSE-MPL](https://github.com/atlasgong/InvisibleItemFramesLite/blob/main/LICENSE-MPL) for details. Any contributions are assumed to be under this license.
 
 0. **Prerequisites**
 
