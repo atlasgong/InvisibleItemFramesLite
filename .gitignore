@@ -1,10 +1,8 @@
 *.iml
-target
 .idea
 .settings
 .classpath
 .project
 **/.DS_Store
-/dependency-reduced-pom.xml
 .gradle/
 build/
