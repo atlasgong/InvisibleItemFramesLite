@@ -14,10 +14,8 @@ repositories {
 dependencies {
     implementation(libs.bstats.bukkit)
     compileOnly(libs.paper.api)
-    compileOnly(libs.adventure.legacy)
 
     testImplementation(libs.paper.api)
-    testImplementation(libs.adventure.legacy)
     testImplementation(libs.mockbukkit)
     testImplementation(enforcedPlatform(libs.junit.bom))
     testImplementation(libs.junit.jupiter)
