@@ -119,7 +119,7 @@ public class InvisibleItemFramesLite extends JavaPlugin {
         ShapelessRecipe recipe = new ShapelessRecipe(key, glowIs.clone());
         recipe.addIngredient(Material.GLOW_INK_SAC);
 
-        recipe.addIngredient(new RecipeChoice.ExactChoice(regIs.clone()));
+        recipe.addIngredient(RecipeChoice.exactChoice(regIs.clone()));
 
         Bukkit.addRecipe(recipe);
     }
