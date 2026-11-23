@@ -1,44 +1,32 @@
 # InvisibleItemFramesLite
 
-> Forked from [InvisibleItemFrames](https://github.com/tiffany352/InvisibleItemFrames) by [Tiffany Bennett (Tiffnix)](https://tiffnix.com/contact).
-
-A fast, minimal Paper plugin that adds **craftable invisible item frames** to your server; no configuration required, no commands or permissions, just drop it in and go.
+A lightweight, high-performance Paper plugin that brings craftable invisible item frames to your server. Designed to work out of the box with no setup required, this plugin keeps things simple with no commands and no permissions, leaving virtually no footprint on your server. Optional configuration configuration is available for customizing plugin behavior.
 
 See a [video demo](https://youtu.be/2kLfRHyH5cc), and the [gallery](https://modrinth.com/plugin/invisibleitemframes/gallery).
 
-<table width="100%">
-  <tr>
-    <th style="text-align: center;">Item Frame Demo</th>
-    <th style="text-align: center;">Crafting Recipe</th>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/0672ce90-f42c-4f5d-8b7d-fe04adf94f1d" alt="Item Frame Demo" width="100%">
-    </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/04ab7b6a-1c56-4f89-805d-cde3a6230389" alt="Crafting Recipe"  width="100%"><br>
-      This crafting recipe is configurable!
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0672ce90-f42c-4f5d-8b7d-fe04adf94f1d" alt="Invisibility Demo" width="600">
+</p>
+<p align="center">
+  <em>Item frames become invisible when holding an item.</em>
+</p>
+
+## Obtaining
+You can craft invisible item frames by placing 8 item frames (or glow item frames) around a phantom membrane.
+| Ingredients | Crafting recipe |
+|-------------|-----------------|
+| [Item Frame](https://minecraft.wiki/w/Item_Frame) +<br>[Phantom Membrane](https://minecraft.wiki/w/Phantom_Membrane) | <img width="250" height="116" alt="The crafting recipe of an invisible item frame (8 item frames, glow or normal, surrounding a phantom membrane." src="https://github.com/user-attachments/assets/925fe5d6-5bb0-49fc-b1cd-dba316808ff0" /> |
+
+This recipe can be configured in [config.yml](https://github.com/atlasgong/InvisibleItemFramesLite/blob/main/src/main/resources/config.yml).
 
 ## Features
 
-- Adds invisible item frames you can craft and place like normal
-- Frames are visible when empty, and automatically turn invisible once an item is added
-- Allows for container pass-through (you can still sneak to rotate items)
-- Perfect for clean builds, displays, or shops without visual clutter
-
-## Why This Version?
-
-This is an updated, stripped-down fork of the original [InvisibleItemFrames](https://www.spigotmc.org/resources/invisible-item-frames.85365/) plugin. Compared to the original:
-
-- Lightweight performance; it's tiny, fast, and focused
-- Works right out of the box; no additional configuration is needed
-- Compatibility with newer Paper versions (26.1+)
-- Plenty of bug fixes
-
-No command trees. No permission spaghetti. Just craftable invisible item frames that feel like they could've been shipped natively with vanilla.
+- Item frames automatically become invisible when holding an item
+- Supports both regular and glow item frames
+- Container pass-through allows interacting with containers behind frames (sneak to rotate items instead)
+- Configurable crafting recipes and plugin behavior
+- No commands or permissions
+- Supports Paper 26.3+
 
 ## Installation
 
@@ -53,12 +41,14 @@ Server admins are expected to update their configuration to replace any legacy c
 
 ## Contributing
 
-Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany352/InvisibleItemFrames/blob/main/LICENSE-MPL). See [LICENSE-MPL](https://github.com/atlasgong/InvisibleItemFramesLite/blob/main/LICENSE-MPL) for details. Any contributions are assumed to be under this license.
+Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany352/InvisibleItemFrames/blob/main/LICENSE-MPL). See [LICENSE-MPL](./LICENSE-MPL) for details. Any contributions are assumed to be under this license.
 
-0. **Prerequisites**
+### Prerequisites
 
 - A UNIX-like system (Linux, macOS, WSL)
 - JDK 25
+
+### Getting Started
 
 1. Clone the repository.
 2. Run `./gradlew test` and update or add tests as needed.
@@ -68,4 +58,7 @@ Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany35
 ## bStats Metrics
 
 <img src="https://bstats.org/signatures/bukkit/InvisibleItemFramesLite.svg" alt="bStats Metrics" width="100%">
+
+## Credits
+This project is forked from [InvisibleItemFrames](https://github.com/tiffany352/InvisibleItemFrames) by [Tiffany Bennett (Tiffnix)](https://tiffnix.com/contact). This fork updates the original plugin for newer Paper versions, fixes existing bugs, and strips down unnecessary functionality. 
 
