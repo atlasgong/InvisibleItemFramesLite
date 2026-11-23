@@ -5,7 +5,7 @@ A lightweight, high-performance Paper plugin that brings craftable invisible ite
 See a [video demo](https://youtu.be/2kLfRHyH5cc), and the [gallery](https://modrinth.com/plugin/invisibleitemframes/gallery).
 
 <p align="center">
-  <img src="https://github.com/atlasgong/InvisibleItemFramesLite/blob/04f6a3fe2801cf85e95d804527907e220e46ac49/.github/images/demo.gif" alt="Invisibility Demo" width="600">
+  <img src="https://raw.githubusercontent.com/atlasgong/InvisibleItemFramesLite/main/docs/images/demo.gif" alt="Invisibility Demo" width="600">
 </p>
 <p align="center">
   <em>Item frames become invisible when holding an item.</em>
@@ -15,7 +15,7 @@ See a [video demo](https://youtu.be/2kLfRHyH5cc), and the [gallery](https://modr
 You can craft invisible item frames by placing 8 item frames (or glow item frames) around a phantom membrane.
 | Ingredients | Crafting recipe |
 |-------------|-----------------|
-| [Item Frame](https://minecraft.wiki/w/Item_Frame) +<br>[Phantom Membrane](https://minecraft.wiki/w/Phantom_Membrane) | <img width="250" height="116" alt="The crafting recipe of an invisible item frame (8 item frames, glow or normal, surrounding a phantom membrane." src="https://github.com/atlasgong/InvisibleItemFramesLite/blob/04f6a3fe2801cf85e95d804527907e220e46ac49/.github/images/crafting_recipe.png" /> |
+| [Item Frame](https://minecraft.wiki/w/Item_Frame) +<br>[Phantom Membrane](https://minecraft.wiki/w/Phantom_Membrane) | <img width="250" height="116" alt="The crafting recipe of an invisible item frame (8 item frames, glow or normal, surrounding a phantom membrane." src="https://raw.githubusercontent.com/atlasgong/InvisibleItemFramesLite/main/docs/images/crafting_recipe.png" /> |
 
 This recipe can be configured in [config.yml](https://github.com/atlasgong/InvisibleItemFramesLite/blob/main/src/main/resources/config.yml).
 
