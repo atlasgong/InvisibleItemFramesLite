@@ -1,6 +1,6 @@
 plugins {
-    `java-library`
-    `maven-publish`
+    java
+    alias(libs.plugins.shadow)
 }
 
 repositories {
@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    api(libs.bstats.bukkit)
+    implementation(libs.bstats.bukkit)
     compileOnly(libs.paper.api)
     compileOnly(libs.adventure.legacy)
 
@@ -32,10 +32,21 @@ java {
     toolchain.languageVersion = JavaLanguageVersion.of(25)
 }
 
-publishing {
-    publications.create<MavenPublication>("maven") {
-        from(components["java"])
+tasks.processResources {
+    val pluginVersion = project.version.toString()
+    inputs.property("pluginVersion", pluginVersion)
+    filesMatching("plugin.yml") {
+        expand(mapOf("project" to mapOf("version" to pluginVersion)))
     }
+}
+
+tasks.jar {
+    enabled = false
+}
+
+tasks.shadowJar {
+    archiveClassifier = ""
+    relocate("org.bstats", "com.atlasgong.invisibleitemframeslite")
 }
 
 tasks.withType<JavaCompile>() {
