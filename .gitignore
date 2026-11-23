@@ -6,3 +6,5 @@ target
 .project
 **/.DS_Store
 /dependency-reduced-pom.xml
+.gradle/
+build/
