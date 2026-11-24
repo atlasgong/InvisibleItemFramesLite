@@ -2,7 +2,7 @@
 
 A lightweight, high-performance Paper plugin that brings craftable invisible item frames to your server. Designed to work out of the box with no setup required, this plugin keeps things simple with no commands and no permissions, leaving virtually no footprint on your server. Optional configuration is available for customizing plugin behavior.
 
-See a [video demo](https://youtu.be/2kLfRHyH5cc), and the [gallery](https://modrinth.com/plugin/invisibleitemframes/gallery).
+See the [video demo](https://youtu.be/2kLfRHyH5cc) and photos in the [gallery](https://modrinth.com/plugin/invisibleitemframes/gallery).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/atlasgong/InvisibleItemFramesLite/main/.github/images/demo.gif" alt="Invisibility Demo" width="600">
@@ -15,7 +15,7 @@ See a [video demo](https://youtu.be/2kLfRHyH5cc), and the [gallery](https://modr
 You can craft invisible item frames by placing 8 item frames (or glow item frames) around a phantom membrane.
 | Ingredients | Crafting recipe |
 |-------------|-----------------|
-| [Item Frame](https://minecraft.wiki/w/Item_Frame) +<br>[Phantom Membrane](https://minecraft.wiki/w/Phantom_Membrane) | <img width="250" height="116" alt="The crafting recipe of an invisible item frame (8 item frames, glow or normal, surrounding a phantom membrane." src="https://raw.githubusercontent.com/atlasgong/InvisibleItemFramesLite/main/.github/images/crafting_recipe.png" /> |
+| [Item Frame](https://minecraft.wiki/w/Item_Frame) +<br>[Phantom Membrane](https://minecraft.wiki/w/Phantom_Membrane) | <img width="250" height="116" alt="The crafting recipe of an invisible item frame (8 item frames, glow or normal, surrounding a phantom membrane)." src="https://raw.githubusercontent.com/atlasgong/InvisibleItemFramesLite/main/.github/images/crafting_recipe.png" /> |
 
 This recipe can be configured in [config.yml](https://github.com/atlasgong/InvisibleItemFramesLite/blob/main/src/main/resources/config.yml).
 
@@ -75,4 +75,3 @@ Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany35
 
 ## Credits
 This project is forked from [InvisibleItemFrames](https://github.com/tiffany352/InvisibleItemFrames) by [Tiffany Bennett (Tiffnix)](https://tiffnix.com/contact). This fork updates the original plugin for newer Paper versions, fixes existing bugs, and strips down unnecessary functionality. 
-
