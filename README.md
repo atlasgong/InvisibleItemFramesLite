@@ -1,6 +1,6 @@
 # InvisibleItemFramesLite
 
-A lightweight, high-performance Paper plugin that brings craftable invisible item frames to your server. Designed to work out of the box with no setup required, this plugin keeps things simple with no commands and no permissions, leaving virtually no footprint on your server. Optional configuration configuration is available for customizing plugin behavior.
+A lightweight, high-performance Paper plugin that brings craftable invisible item frames to your server. Designed to work out of the box with no setup required, this plugin keeps things simple with no commands and no permissions, leaving virtually no footprint on your server. Optional configuration is available for customizing plugin behavior.
 
 See a [video demo](https://youtu.be/2kLfRHyH5cc), and the [gallery](https://modrinth.com/plugin/invisibleitemframes/gallery).
 
@@ -61,4 +61,3 @@ Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany35
 
 ## Credits
 This project is forked from [InvisibleItemFrames](https://github.com/tiffany352/InvisibleItemFrames) by [Tiffany Bennett (Tiffnix)](https://tiffnix.com/contact). This fork updates the original plugin for newer Paper versions, fixes existing bugs, and strips down unnecessary functionality. 
-
