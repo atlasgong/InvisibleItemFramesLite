@@ -35,6 +35,20 @@ This recipe can be configured in [config.yml](https://github.com/atlasgong/Invis
 3. Restart your server
 4. Craft your item frames :)
 
+## Support the Project
+
+If you enjoy InvisibleItemFramesLite and are looking for Minecraft server hosting, consider supporting the project by hosting with RealisticNode! I earn a commission on purchases made through the link below.
+
+Their plans start at just $3/month. Servers run on AMD Ryzen with NVMe storage, DDoS protection, and daily backups.
+
+You can click the banner below and use code `INVISIBLEFRAMES` for 10% off.
+
+<p align="center">
+  <a href="https://realisticnode.com/invisibleframes">
+    <img src="https://raw.githubusercontent.com/atlasgong/InvisibleItemFramesLite/main/.github/images/realistic_node_banner.webp" alt="RealisticNode server hosting, use code INVISIBLEFRAMES for 10% off." width="600">
+  </a>
+</p>
+
 ## Migrating from v2 to v3
 
 Server admins are expected to update their configuration to replace any legacy chat formatting with Adventure's MiniMessage formatting: https://docs.advntr.dev/minimessage/format. Alternatively, if you wish, you may simply delete the config file and a fresh one will automatically be generated on the next server restart.
@@ -61,3 +75,4 @@ Code is licensed under MPLv2, as per our [upstream](https://github.com/tiffany35
 
 ## Credits
 This project is forked from [InvisibleItemFrames](https://github.com/tiffany352/InvisibleItemFrames) by [Tiffany Bennett (Tiffnix)](https://tiffnix.com/contact). This fork updates the original plugin for newer Paper versions, fixes existing bugs, and strips down unnecessary functionality. 
+
